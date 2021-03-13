@@ -40,30 +40,30 @@ console.log(result)
 var g=1;
 var kg=g*1000;
 var a=1.2*kg;
-console.log(a);
+console.log( a +'g');
 
 
 /*6. How many extra seconds we wait for our friend Anna who is being late for 5 minutes? What
 about Tom who is being late half an hour? It is hard to be on time these days…*/
 
-var s=1
-var m=60*s
-var a=5*m
-console.log(a)
-var t=30*m
-console.log(t)
+var sec=1
+var min=60*sec
+var Anna=5*min
+console.log('Anna is being late for' + Anna + 'sec')
+var Tom=30*min
+console.log('Tom is being late for' + Tom + 'sec')
 
 
 /*7. How many MB of additional memory we have if we buy a 4GB USB stick? How many news
 articles each in size 98KB can fit in it?*/
 
-/*var giga=4;
+var giga=4;
 var memorijakb=giga*1000000;
 var dokument=98;
 var brDokumenata = memorijakb/dokument;
 var ostatak = brDokumenata % dokument;
-var broj= (memorijaKB - ostatak) / dokument
-console.log(broj - ostatak);*/
+var broj= (memorijakb - ostatak) / dokument
+console.log(broj - ostatak);
 
 
 /*9. Do you know any other way to write a = a * 2? How about: b = b + 3; c = c / 5; d = d - 7?*/
@@ -75,10 +75,10 @@ var b=2;
 console.log (b+=3);
 
 var c=10;
-console.log (c/5);
+console.log (c/=5);
 
 var d=10;
-console.log(d-7)
+console.log(d-=7)
 
 /*10. Create the following variables:
 - a variable containing your name,
@@ -168,7 +168,7 @@ console.log(result);
 /*15. Let’s say there are speed limitations on a motorway from 60 to 120 kilometers per hour. If
 we store the current speed value in the variable speed. Write an expression which will check if
 we are driving drive safely or not? (true if we are driving safe and false if not)*/
-var a = 80;
+var a = 80
 var safe = a < 120 && a>60;
 var not  = a> 120 && a<60;
 console.log(safe);

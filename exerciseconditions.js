@@ -33,7 +33,7 @@ number is divisible by 3 and 5.
 If it is, print that number.
 
 Sample numbers: 15, 12*/
-var a = 12
+var a = 15
 
 if (a%3 === 0 && a%5 === 0) {
     console.log( a )
@@ -266,8 +266,8 @@ Sample Input: 5,54 Sample Input: 6,50 Sample Input: 40,10
 
 Output : - Output : true Output : true*/
 
-var a=5;
-var b=54;
+var a=45;
+var b=10;
 if (a===50 || b===50 || a+b===50 ){
     console.log('true')
 } else {
