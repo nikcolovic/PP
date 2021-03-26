@@ -23,27 +23,27 @@ function oddNumber(a)  {
     return 'Number is odd';
 }
 }
-var result = oddNumber(8);
+var result = oddNumber(7)
 console.log(result);
 
 /*
 3. Write a program that checks if a given number is a three digit long number.*/
 
 function digitNumber (d) {
-    if (d-999 <= 0 && d-999>=-899){
+    if (d-999<=0 && d - 999>=-899){
         return 'It is three digit number'
     } else {
         return 'It is not a three digit number'
     }
 }
-console.log(digitNumber(22))
+console.log(digitNumber(100))
 
 /*
 4. Write a program that calculates an arithmetic mean of four numbers.*/
 function aritmMean() {
     var sum=0;
     for (var i =0; i<arguments.length; i++){
-        sum+=arguments[i];
+        sum += arguments[i];
     }
     return sum/arguments.length;
 }
@@ -61,6 +61,49 @@ is 5 the program should draw:
 * *
 *****
 */
+/*function sq(numOfStars) {                   
+    var starFinal = '';                                            // Final string
+    for (var i = 1; i <= numOfStars; i++) {                        // Main loop for creating rows 
+        if (i === 1 || i === numOfStars) {                         // condition for creating the first and last row
+            var starL = '';
+            for (var k = 0; k < numOfStars; k++) {                 // Loop for first and last row
+                starL = starL + '*'; 
+            }
+            starFinal = starFinal + starL + '\n';                  // Adding created string to the final string
+        }
+            else {
+                var starM = '';
+                for (var j = 1; j <= numOfStars; j++) {            // Loop for creating middle rows
+                    if (j === 1 || j === numOfStars) {             // Condition for printing '*' or ' ' string
+                        var starM = starM + '*';
+                    }    
+                    else {            
+                        starM = starM + ' '; 
+                    }
+                }
+                starFinal = starFinal + starM + '\n';              // Adding created middle row string to the final string
+            }
+    }
+    return starFinal;
+}
+var star = sq(5);
+console.log(star);*/
+function sqaureDraw (a) {
+    var field = "";
+    for (var i = 0; i < a; i++){
+        for (var j = 0; j < a; j++) {
+            if (i > 0 && i < a-1 && j > 0  && j < a-1) {
+                field += " ";
+            } else {
+                field += "*";
+            }
+        } 
+        field += "\n";
+    }
+    return field;
+}
+var result5 = sqaureDraw(7);
+console.log (result5);
 
 /*
 6. Write a program that draws a horizontal chart representing three given values. For
@@ -69,6 +112,26 @@ example, if values are 5, 3, and 7, the program should draw:
 * * *
 * * * * * * * 
 */
+function stars(f,s,k) {
+    var starSumF = '';
+    for (var i = 0; i < f; i++) {
+        starSumF = starSumF + '*'; 
+    }
+    var starSumS = '';
+    for (var j = 0; j < s; j++) {
+        starSumS = starSumS + '*'; 
+    }
+    var starSumK = '';
+    for (var i = 0; i < k; i++) {
+        starSumK = starSumK + '*'; 
+    }
+    return starSumF + '\n' + starSumS + '\n' + starSumK;
+}
+
+var f = 5;
+var s = 3;
+var k = 7;
+console.log(stars(f,s,k))
 
 /*
 7. Write a program that calculates a number of digits of a given number. */
@@ -90,7 +153,7 @@ Result: 3 */
 var e = 7;
 var a = [2, 4, 7, 8, 7, 7, 1];
 
-function numOfAppearances () {
+function numOfAppearances (k) {
     var k=0;
     for (i=0; i < a.length; i++){
         if (e === a[i]) {
@@ -103,8 +166,6 @@ console.log(numOfAppearances(e,a))
 
 /*
 9. Write a program that calculates the sum of odd elements of a given array. */
-
-
 var array = [1, 2, 3, 4, 5, 6]
 var sum = 0
 
@@ -153,4 +214,3 @@ function numberOfTimes() {
     return conc;
 }
 console.log(numberOfTimes(conc, string))
-

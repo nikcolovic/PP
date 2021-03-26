@@ -33,14 +33,11 @@ let n1 = 22;
 // Example output: 
 // 2 4 6 8 10 12 14 16 18 20 22 OR each item on a new line */
  
-/*var n1 = 22;
-var array = [0]
+var n1 = 22;
 
-for (i=0; i < n1; i++)
-    if (n1 % 2 === 0 && n1 > 0); {
-        array[i] = array + array[i]
+for ( var i=1; i <= n1; i++) {
+    ( i % 2 === 0) ? console.log(i) : console.log(' ') 
     }
-        console.log(array[i])*/
 
 /*Exercise 3)
 Using a for loop output the elements in reverse order
@@ -84,17 +81,15 @@ let str1 = "javascript";
 // jZvZsZrZpZ OR each letter on a new line
 // HINT: You can use  if((i+1) % 2 == 0) to check for even indexes */
 
-/*let str1 = "javascript"
-var array = []
+var str1 = 'javascript';
+var changeToLetter = 'Z';
+var strZ = '';
 
-for (i=0; i < str1.length; i++)
-    if (i % 2 == 0){
-        array[i] = str1[i] + 'Z';
+for (var i = 0; i < strO.length; i++) {
+    (i % 2 !== 0) ? strZ = strZ + changeToLetter : strZ = strZ + str1[i];
 }
-    if((i+1) % 2 == 0){
-        array[i] = remove[i]
-}
-console.log(array)*/
+
+console.log(strZ);
 /*
 Exercise 6)
 Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
@@ -103,13 +98,13 @@ let str2 = "don’t know why";
 // Example output: 
 // “yes” */
 
-let str2 = "don’t know why";
+var string = 'don\'t know why';
+var letter = 'y'; 
 
-for (i = 0; i < str2.length; i++)
-    if (str2[i] === 'y') {
-        console.log('yes')
-        break
-    } else {console.log('no')}
+for (var i = 0; i < string.length; i++) {
+    string[i] === letter ? ifLetter = true : ifLetter = false;
+}
+    ifLetter ? console.log('Yes, the string contains the given letter') : console.log('No');
 
 /*
 Exercise 7)
@@ -119,7 +114,7 @@ let n2 = 4; //  4 * 3 * 2 * 1 = 24
 // Example output:
 // 24 */
 
-let n2 = 4;
+/*let n2 = 4;
 var f = [];
 
 for (var i = 0; i < n2.lenght; i++)
@@ -127,7 +122,7 @@ if (n2 > 0) {
     f = n2 * n2[i]
 }
 
-console.log(f)
+console.log(f)*/
 
 /*
 Exercise 8)
@@ -147,7 +142,7 @@ let pin = 0704;
 // 0704
 // That was correct! */
 
-    var pin = 0004;
+    var pin = 0704;
     var pin1 = 0704;
 
     for (i = 0; i < 4; i++);
@@ -173,12 +168,18 @@ let str4 = "Java";
 // string2 palindrome?: 
 // No */
 
-/*let str3 = "racecar";
+let str3 = "racecar";
 let str4 = "Java";
+var isPalindrome = true
 
-for (i = str3.length - 1; i >= 0; i--) 
-
-console.log('yes')*/
+for (start = 0; end = (str3.length - 1); start < end, start++, end--)
+    if(str3[start] !== str3[end]) {
+        isPalindrome = false; 
+        console.log('No')
+        break       
+    } else
+        console.log('yes')
+        
 
 /*
 Exercise 10)
@@ -190,3 +191,12 @@ let num2 = 8;
 // Example output: 
 // 1 + 2 = 3
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36 */
+
+/*let num1 = 2; 
+let num2 = 8; 
+sum = 0;
+
+for (i =0; i < num1.length; i++) {
+    sum = sum + num1[i]
+}
+console.log(sum)*/
