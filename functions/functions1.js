@@ -143,7 +143,7 @@ function numOfDigits () {
     return string.length;
     }
    
-console.log(numOfDigits (a))
+console.log(numOfDigits(a))
 /*
 8. Write a program that calculates a number of appearances of a given number in a given
 array.
