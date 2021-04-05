@@ -61,15 +61,16 @@ console.log(filterFalsy(arr))
 4. Write a function that reverses a number. The result must be a number.
 12345 --> 54321 // Output must be a number */
 
-function reverse(input){
-    var strInput = '';
-    var input = input + '';
-    for (var i = input.length - 1; i >=0; i--){
-        strInput += strInput[i];
+function reverseNum(num) {
+    var numStr = num + '';
+    var numStrRev = '';
+    for (var i = numStr.length-1 ; i >= 0; i--) {
+        numStrRev += numStr[i]; 
     }
-    return parseInt(strInput)
+    return parseInt(numStrRev);
 }
-console.log(reverse(12345))
+
+console.log(reverseNum(12345));
 /*
 5. Write a function to get the last element of an array. 
 Passing a parameter 'n' will return the last 'n' elements of the array.
@@ -95,6 +96,21 @@ function lastElement(array, n) {
 6, 0 -> [0, 0, 0, 0, 0, 0]
 2, "none" -> ["none", "none"]
 2 -> [null, null] */
+
+function createArr(numOf,elem) {
+    if (elem === undefined) {
+        elem = null;
+    }
+    var arrOfElem = [];
+    var i = 0;
+    while (i < numOf) {
+        arrOfElem[i] = elem;
+        i++; 
+    }
+    return arrOfElem;
+}
+
+console.log(createArr(6,0));
 
 /*7. Write a function that says whether a number is perfect. 28 -> 28 is a perfect number.
 
@@ -144,10 +160,24 @@ function wordCount(str,word) {
     }
 } */
 
-function wordFind (stringW, word)
-    var checkWOrd = '';
+function wordFind(stringW, word) {
+    var checkWord = '';
     var countW = 0;
-    stringW += ' ';
+    stringW +=' ';
+    for (var i = 0; i < stringW.length; i++) {
+        if (stringW[i] !== ' ') {
+            checkWord += stringW[i];
+        }
+        else {
+            if (checkWord === word) {
+                countW++;
+            }                                               
+            checkWord = ''
+        }
+    }
+    return '\'' + word + '\' was found ' + countW + ' times';
+} 
+console.log(wordFind('aa bb cc dd aa', 'aa'));
 
     /* 9. Write a function to hide email address. "myemailaddress@bgit.rs" -> "mye...@bgit.rs" */
 function hideEmail(hiddenEmail){
