@@ -157,6 +157,19 @@ var Median = function (a) {
 
 /*
 10. Write a function to find the element that occurs most frequently. */
+function mostFrequently(element){
+    var arr = [a, b, c, d, a, b, b, b]
+    var numOfAppearances = 0;
+    var element = a; 
+    for (i = 0; i < arr.length; i++){
+        if (element === arr[i]) {
+          numOfAppearances += numOfAppearances++
+        }
+    }
+    return numOfAppearances
+}
+
+console.log(mostFrequently([a, b, c, d, a, b, b, b])) // ne daje rezultat ujutro pogledati
 
  
 
@@ -190,7 +203,10 @@ Make the function flexible to receive dynamic number or parameters. */
  
 
 /* 14.
-The body mass index (BMI) is the ratio of the weight of a person (in kilograms) to the square of the height (in meters). Write a function that takes two parameters, weight and height, computes the BMI, and prints the corresponding BMI category:
+The body mass index (BMI) is the ratio of the weight of a person (in kilograms) 
+to the square of the height (in meters). 
+Write a function that takes two parameters, weight and height, 
+computes the BMI, and prints the corresponding BMI category:
 Starvation: less than 15
 Anorexic: less than 17.5
 Underweight: less than 18.5
@@ -199,6 +215,27 @@ Overweight: greater than or equal to 25 but less than 30
 Obese: greater than or equal to 30 but less than 40
 Morbidly obese: greater than or equal to 40 */
 
+function BMI(weight,height) {
+  index = weight/(height*height);
+  var result = '';
+    if (index <= 15) {
+      result += 'Starvation'
+    } else if (index >= 15 && index < 17.5){
+      result += 'Anorexic'
+    } else if ( index >= 17.5 && index < 18.5) {
+      result += 'Underweight'
+    } else if ( index >= 18.5 && index < 25){
+      result += 'Ideal'
+    } else if ( index >= 25 && index < 30){
+      result += 'Overweight'
+    } else if ( index >= 30 && index < 40) {
+      result += 'Obese'
+    } else if ( index >= 40) {
+      result += 'Morbidly obese'
+    }
+  return result
+}
+console.log(BMI(80,1.78))
  
 
 
