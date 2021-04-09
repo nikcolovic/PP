@@ -157,21 +157,26 @@ var Median = function (a) {
 
 /*
 10. Write a function to find the element that occurs most frequently. */
-function mostFrequently(element){
-    var arr = [a, b, c, d, a, b, b, b]
-    var numOfAppearances = 0;
-    var element = a; 
-    for (i = 0; i < arr.length; i++){
-        if (element === arr[i]) {
-          numOfAppearances += numOfAppearances++
-        }
+
+function frequency(arr) {
+  var mostF = arr[0];
+  var occurs = 0;
+  for (var i = 0; i < arr.length; i++) {
+    var counter = 0;
+    for (var j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        counter++;
+      }
     }
-    return numOfAppearances
+    if (occurs < counter) {
+      mostF = arr[i];
+      occurs = counter;
+    }
+  }
+  return mostF;
 }
-
-console.log(mostFrequently([a, b, c, d, a, b, b, b])) // ne daje rezultat ujutro pogledati
-
- 
+var a = [8, 4, 1, 2, 7, 5, 1, 1, 1, 2, 5];
+console.log(frequency(a));
 
 /*
 11. Write a function to find and return the first, middle and last element of an 
