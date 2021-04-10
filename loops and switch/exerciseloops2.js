@@ -40,6 +40,7 @@ for (i=0; i < array.length; i++)
 Input array: [4, 2, 2, -1, 6]
 Output: -1, 3 */
 
+  
 var m = [4, 2, 2, -1, 6];
 var min = m[0];                                                 // the first element is declared the minimum
 var index = 0;                                                  // for 
