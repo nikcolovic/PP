@@ -136,12 +136,59 @@ Write a program that concatenates two arrays.
 Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
 Output array: [4, 5, 6, 2, 3, 8, 11, 9] */
 
+function concatenate(array1,array2){
+    newArray = [];
+    for(i=0; i < array1.length; i++){
+        newArray[i] = array1[i];
+    }
+    for(j=0; j < array2.length; j++){
+        newArray[array1.length + j] = array2[j];
+    }
+    return newArray
+}
+
+console.log(concatenate([4, 5, 6, 2], [3, 8, 11, 9]))
+
 /*9.
 Write a program that deletes a given element e from the array a. 
 Input: e = 2, a = [4, 6, 2, 8, 2, 2]
 Output array: [4, 6, 8] */
 
+function delElement(array,e){
+    newArray = [];
+    for(i=0; i<array.length; i++){
+        if(e !== array[i]){
+            newArray[newArray.length] = array[i];
+        }
+    }
+    return newArray
+}
+console.log(delElement([4, 6, 2, 8, 2, 2],2))
 /*10.
-Write a program that inserts a given element e on the given position p in the array a. If the value of the position is greater than the array length, print the error message. 
+Write a program that inserts a given element e on the given position p in the array a. 
+If the value of the position is greater than the array length, print the error message. 
 Input: e = 78, p = 3, a = [2, -2, 33, 12, 5, 8]
 Output: [2, -2, 33, 78, 12, 5, 8] */
+
+function insertElement(array,insert,position){
+    newArray = [];
+    if (position < array.length){
+        for (i=0; i < array.length && i <= position; i++){
+            if(i === position){
+            newArray[i] = insert
+            }
+            else {
+                newArray[newArray.length] = array[i];
+            }   
+        }
+        for (j = 0; j < array.length - position; j++){
+                newArray[newArray.length] = array[position+j]
+        }
+        return newArray
+    }
+    else{
+        console.log('Error, array is too short to enter input in this position')
+    }
+}
+console.log(insertElement([2, -2, 33, 12, 5, 8],78,3))
+
