@@ -163,7 +163,7 @@ function delElement(array,e){
     }
     return newArray
 }
-console.log(delElement([4, 6, 2, 8, 2, 2],2))
+console.log(delElement([4, 6, 2, 8, 2, 2],6))
 /*10.
 Write a program that inserts a given element e on the given position p in the array a. 
 If the value of the position is greater than the array length, print the error message. 

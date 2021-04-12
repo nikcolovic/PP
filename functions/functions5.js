@@ -3,10 +3,26 @@ Print out the modified array in the console.
 Input:  [ 3, 500, 12, 149, 53, 414, 1, 19 ]
 Output: [ 3, 1, 12, 149, 53, 414, 500, 19 ]
 */
-
-
-
-
+function switchMinMax(arr) {
+    var min = arr[0];
+    var max  =arr[0];
+    var indexMin;
+    var indexMax;
+    for( var i = 1; i < arr.length; i++) {
+        if(arr[i] < min){
+            min = arr[i];
+            indexMin = i;
+        }
+        if(arr[i]  >max){
+            max = arr[i];
+            indexMax = i;
+        }
+    }
+    arr[indexMin] = max;
+    arr[indexMax] = min;
+    return arr;
+}
+console.log(switchMinMax([ 3, 500, 12, 149, 53, 414, 1, 19 ]));
 
 /*2. Use the following array to make a new one by dividing its values by two and adding 5. 
 If a given element's value is 0, change it to 20.
@@ -26,6 +42,7 @@ function divideElement(array){
     return newArray
 }
 console.log(divideElement([ 3, 500, -10, 149, 53, 414, 1, 19 ]))
+
 /* 3. Initialize two arrays. The first one should contain student names, 
 the second one the number of points for each student. 
 Display students' names with their corresponding grade. Use the following ranges:
@@ -39,12 +56,36 @@ Input:
 Output: 
 Bill acquired 59 points and earned 6. Micahel acquired 50 points and failed to complete the exam.
 */
+function studentsGrade (name,points){
+    var display = ''
+    for(i=0; i < name.length; i++){
+        if(points[i] < 51 ){
+            display += name[i] + ' acquired ' + points[i] + ' points and failed to complete the exam.\n'
+        }else if(points[i] <= 60){
+            display += name[i] + ' acquired ' + points[i] + ' points and earned 6.\n '
+        }else if(points[i] <= 70){
+            display += name[i] + ' acquired ' + points[i] + ' points and earned 7.\n'
+        }else if(points[i] <= 80){
+            display += name[i] + ' acquired ' + points[i] + ' points and earned 8.\n '
+        }else if(points[i] <= 90){
+            display += name[i] + ' acquired ' + points[i] + ' points and earned 9.\n '
+        }else if(points[i] <= 100){
+            display += name[i] + ' acquired ' + points[i] + ' points and earned 10.\n '
+        }
+    }return display
+} 
+
+console.log(studentsGrade(["Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill"], [ 50, 39, 63, 72, 99, 51, 83, 59 ]))
+
 /*4.
 (skip :))Sort a previously defined array. Place its sorted values into a new array 
 whose values are equivalent to the first array's values multiplied by 2.
 Input: [ 13, 11, 15, 5, 6, 1, 8, 12 ]
 Output: [ 2, 10, 12, 16, 22, 24, 26, 30 ]
 */
+
+
+
 /*5.	
 (skip :))Sort a previously defined array in a descending order and display it in the console.
 Input:  [ 13, 11, 15, 5, 6, 1, 8, 12 ]
