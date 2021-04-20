@@ -5,7 +5,7 @@ function sumPolygon(n) {
     var k = (n-2) * 180;
     sum = 0;
     for (i = 0; i < n; i++){
-        sum = sum + sum[k]
+        sum += sum[k]
     } 
     return k
 }
@@ -118,7 +118,7 @@ console.log(lessThanOrEqualToZero(num))
 Create a function that takes a number as an argument, increments the number by +1 and returns the result.*/
 var a = 7
 function addition(num) {
-    var a = num + 1
+    var a = num + 1;
     return a
 }
 console.log(addition(a))
@@ -145,13 +145,13 @@ function squaed(b) {
 }
 */
 
-function squaed(a) {
+function squared(a) {
 	return a * a
 }
 
-console.log(squaed(5))
-console.log(squaed(9))
-console.log(squaed(100))
+console.log(squared(5))
+console.log(squared(9))
+console.log(squared(100))
 
 /* 13. Buggy Code (Part 5)
 Mubashir created an infinite loop! Help him by fixing the code in the code tab to pass this challenge. 
