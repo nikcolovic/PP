@@ -157,7 +157,7 @@ function numOfAppearances (k) {
     var k=0;
     for (i=0; i < a.length; i++){
         if (e === a[i]) {
-            k = k + 1;
+            k++;
         }
     }
     return k;
@@ -192,7 +192,7 @@ function numOfAppearances () {
     for (i=0; i < a.length; i++) {   
 
        if (letter1 === a[i] || letter2 === a[i]) {
-            num = num + 1;
+            num++;
        }
     }
     return num;    

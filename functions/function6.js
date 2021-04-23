@@ -198,14 +198,38 @@ var firstMiddleLast = function (a) {
 12. Write a function to find the average of N elements. 
 Make the function flexible to receive dynamic number or parameters. */
 
- 
+function Average(array){
+  var n;
+  var sum = 0;
+  for(i=0; i <= array.length; i++){
+    sum += i;
+    n = sum / (array.length);
+  }
+  return n;
+}
+console.log(Average([1,2,3,4,5,6]))
 
+ 
 /*
 13. Write a function to find all the numbers greater than the average. */
 
-
-
- 
+function greaterThanAverage(array){
+  greater = [];
+  var n;
+  var sum = 0;
+  for(i=0; i <= array.length; i++){
+    sum += i;
+    n = sum / (array.length);
+  }
+  for(i=0; i<=array.length; i++){
+    if(array[i] > n){
+      greater[i] = array[i];
+    } else if ( array[i] < n){
+      greater[i] = 'Less than average'
+    }
+  } return greater
+}
+console.log(greaterThanAverage([1,2,3,4,5,6]))
 
 /* 14.
 The body mass index (BMI) is the ratio of the weight of a person (in kilograms) 
