@@ -221,12 +221,10 @@ function greaterThanAverage(array){
     sum += i;
     n = sum / (array.length);
   }
-  for(i=0; i<=array.length; i++){
+  for(i=0; i<array.length; i++){
     if(array[i] > n){
-      greater[i] = array[i];
-    } else if ( array[i] < n){
-      greater[i] = 'Less than average'
-    }
+      greater[greater.length] = array[i];
+          } 
   } return greater
 }
 console.log(greaterThanAverage([1,2,3,4,5,6]))
