@@ -99,7 +99,34 @@ console.log(userNameMail(email('pera','peric')))
 of the given octal number. 
 Input: 034
 Output: 28*/
-
+/*function decToOctal(n){
+     
+    // array to store octal number
+    let octalNum = new Array(100);
+ 
+    // counter for octal number array
+    let i = 0;
+    while (n != 0) {
+ 
+        // storing remainder in octal array
+        octalNum[i] = n % 8;
+        n = Math.floor(n / 8);
+        i++;
+    }
+ 
+    // printing octal number array in reverse order
+    for (let j = i - 1; j >= 0; j--)
+        document.write(octalNum[j]);
+}
+ 
+// Driver Code
+    let n = 34;
+     
+    // Function Call
+    decToOctal(n);*/
+ 
+ 
+// This code is contributed by Surbhi Tyagi
 
 /*6.Write a function that checks if a given string is valid password. 
 The password is valid if it is at least 6 characters long and contains at least one digit. 
@@ -110,9 +137,61 @@ Output: Your password is invalid!
 
 	Input: JSGuru123
 	Output: Your password is cool! */
+//callback version
+/*function checkValidPassword(string){
+	var number;
+	for (i=0; i < string.length; i++){
+		if(string.length > 6 || typeof string[i] === number){
+			successCallback(string);{
+			var result = 'Your password is cool!'
+			}
+			return result;
+		} 
+		else{
+			errorCallback(string);{
+			var result = 'Your password is invalid!';
+			}
+			return result;
+		}
+	}
+	return result;
+}
+console.log(checkValidPassword('JSGuru123'))*/
+
+
+//normal function version
+function checkValidPassword(string){
+	var number;
+	for (i=0; i < string.length; i++){
+		if(string.length > 6 || typeof string[i] === number){
+			var result = 'Your password is cool!'
+		} 
+		else{
+			var result = 'Your password is invalid!'
+		}
+	}
+	return result 
+}
+console.log(checkValidPassword('JSGuru123'))
+
+
 
 /*7. Write a function that filters elements of the given array so that they satisfy 
 a condition given by the callback function.
 Input: [2, 8, 11, 4, 9, 3], callback function checks if the number is odd
 Output: [11, 9, 3] */
+
+function justArray(array){
+	return array;
+}
+function findOdd(array){
+	newArray = [];
+	for(i=0; i < array.length; i++){
+		if(array[i]%2 !== 0){
+			newArray += array[i] + ' ';
+		}
+	}
+	return newArray;
+}
+console.log(findOdd([2, 8, 11, 4, 9, 3]))
 

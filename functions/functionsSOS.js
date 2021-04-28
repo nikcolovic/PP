@@ -140,3 +140,98 @@ function replace(array, index1, index2){
     return newArray
 }
 console.log(replace([3, 5, 1, 8, 90, -4, 23, 1, 67],2,6))
+
+/*7.Write a function that checks if a given object has a given property with the given value. 
+Input: {x: 20, y: 30}, “x”, 20 
+Output: true
+Input: {x: 20, y: 30}, “z”, 20 
+Output: false 
+Input: {x: 20, y: 30}, “x”, 10 
+Output: false */
+function checkValue(x,y,g,d){
+    var g; var d; var result = 'false'
+        if (x === g === d || y === g === d){
+            console.log('true')
+        }
+    return result
+}
+console.log(checkValue(20,30,'z',20))
+
+
+/*8.Write a function that checks if every element of the first array is contained in the second array. Be careful with repetitions! 
+Input: [3, 4, 1, 3], [8, 9, 3, 1, 11, 4, 3]
+Output: true*/
+var check = (function checkElement(array1,array2){
+    var counter = 0;
+    for(var i = 0; i < array1.length; i++){
+        for (var j = 0; j < array2.length; j++){
+            if(array1[i] === array2[j]){
+                counter++;
+                break;
+            }
+        }    
+    }
+    if (counter === array1.length){
+        return console.log('true')
+    }
+    else {
+        return console.log('false')
+    }
+})([3, 1, 4, 3, 5],[8, 9, 1, 11, 4, 3])
+
+/*9.
+Write a function that sorts an array of strings by the number of appearances of the letter ‘a’ or ‘A’. 
+Input: [‘apple’, ‘tea’,  ‘amazing’, ‘morning’, ‘JavaScript’]
+Output: [‘morning’, ‘apple’, ‘tea’, ‘JavaScript’, ‘amazing’]*/
+
+var numberOfAInStrings = (function (string){
+    var counterA = 0;
+    for (i = 0; i < string.length; i++){
+        if(string[i] === 'a' || string[i] === 'A'){
+                counterA++;
+        }
+    }
+    return counterA
+});
+var sortByNumberOfAppearances = (function(ArrayOfStrings){
+    var newStrings;
+    for(var i = 0; i < ArrayOfStrings.length; i++){
+        for (var j = i + 1; j < ArrayOfStrings.length - 1; j++ ){
+            if (numberOfAInStrings(ArrayOfStrings[i]) > numberOfAInStrings(ArrayOfStrings[j])) {
+                newStrings = ArrayOfStrings[i];
+                ArrayOfStrings[i] = ArrayOfStrings[j];
+                ArrayOfStrings[j] = newStrings;
+            }
+        }
+    }
+    return ArrayOfStrings;
+}
+)(['apple', 'tea', 'amazing', 'morning', 'JAvAScript'])
+console.log(sortByNumberOfAppearances)
+
+
+/*10.
+Write a function that prints out the date of the next day. 
+Output:  25. 10. 2018. */
+
+
+/*11.
+Write a function that prints out the date of the previous day. 
+Output:  23. 10. 2018. */
+
+/*12.
+Write a function that prints out an array of the numbers aligned from the right side.
+Input: [78, 111, 4, 4321]
+Output: 
+78
+111  
+4
+4321*/
+function arrayAlign(array){
+    newArray = [];
+    for (var i = 0; i < array.length; i++ ){
+        newArray += array[i] + '\n';
+    }
+    return newArray;
+}
+console.log(arrayAlign([78, 111, 4, 4321]))
