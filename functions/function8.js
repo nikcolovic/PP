@@ -187,7 +187,7 @@ function justArray(array){
 function findOdd(array){
 	newArray = [];
 	for(i=0; i < array.length; i++){
-		if(array[i]%2 !== 0){
+		if(array[i] % 2 !== 0){
 			newArray += array[i] + ' ';
 		}
 	}
