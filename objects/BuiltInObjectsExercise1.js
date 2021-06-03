@@ -319,6 +319,7 @@ Write a function that for a given departure and arrival time calculates the time
 	Input: 8:22:13 11:43:22
 	Output: 3 hours 21 minutes 9 seconds
   */ 
+ 
   /*
   10a.
 Write a constructor function that creates points in space. Each point in space has its own x, y, and z coordinate. For example, (3, 5, 1) can be a point in space.
@@ -329,7 +330,8 @@ Write a function that calculates the distance between two points in the space.
 11.
 a. Write a function that generates a random integer value between 5 and 20.
 b. Write a function that generates a random integer value between 50 and 100. 
-c. Write a function which expects a number and a callback generator function and returns an array of numbers produced by the generator function.    
+c. Write a function which expects a number and a callback generator function and 
+returns an array of numbers produced by the generator function.    
 
 */
 /*
@@ -339,7 +341,7 @@ c. Write a function which expects a number and a callback generator function and
 		Output: [6, 2, 9, 1, 3, 11]  (it can be any random permutation of the given array)*/
 
     function changeOrderInArray (array){
-      return array.sort(() => Math.random() - 0.5); // We will sort new array with formula who randomize elements 
+      return array.sort(() => Math.random() - 0.5); // We will sort new array with Built in function who randomize elements 
     }
     console.log(changeOrderInArray([3, 6, 11, 2, 9, 1]))
 
