@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Movie festival</title>
+</head>
+<body>
+    <h1>Welcome to Movie Festival</h1>
+    <div>
+        <br>
+        <br>
+    <h3>Please fill in the form</h3>
+    <h4>Movie</h4>
+        <form action="">
+            <label for="title">Title</label>
+            <br>
+            <input type="text" id="title" class="widthInput">
+            <br>
+            <label for="length">Length(min)</label>
+            <br>
+            <input type="text" id="length" class="widthInput">
+            <br>
+            <label for="title">Select Genre</label>
+            <br>
+            <select id="genre">
+                <option value="">---</option>
+                <option value="drama">Drama</option>
+                <option value="action">Action</option>
+                <option value="horror">Horror</option>
+                <option value="adventure">Adventure</option>
+                <option value="sci-fi">Sci-fi</option>
+            </select>
+            <br>
+            <input type="button" value="Create movie" class="button" id="create-movie">
+        </form>
+        <div>
+            <p>All movies length:<span id="all-movie-length"></span></p>
+        </div>
+        <p id="movie-error"></p>
+        <ul id="movie-list"></ul>
+        <hr>
+        <h4>Program</h4>
+        <form action="">
+            <label for="date">Date</label>
+            <br>
+            <input type="date" placeholder="mm/dd/yyyy" id="date" class="widthInput">
+            <br>
+            <input type="button" value="Create program" class="button" id="create-program">
+            <br>
+            <p id="program-error"></p>
+            <ul id="program-list"></ul>
+            <hr>
+            <label for="movie-select">Movie</label>
+            <br>
+            <select id="movie-select">
+                <option value="">---</option>
+            </select>
+            <br>
+            <label form="program-select">Program</label>
+            <br>
+            <select id="program-select">
+                <option value="">---</option>
+            </select>
+            <br>
+            <input type="button" value="Add movie to the program" class="button" id="add-movie">
+        </form>
+    </div>
+    <script src="./js/entities.js"></script>
+    <script src="./js/form.js"></script>
+</body>
+</html>
