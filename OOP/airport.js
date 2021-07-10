@@ -192,8 +192,6 @@ belgradeParis.addPassenger(passenger2);
 console.log(belgradeParis.getData());
 nikolaTesla.addFlight(belgradeParis);
 console.log(belgradeParis.getData())
-
-
 })();
 
 

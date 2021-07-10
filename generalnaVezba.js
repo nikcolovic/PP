@@ -352,9 +352,41 @@ var result = s[3];
 console.log(result);
 
 
+function Vacation(destination, length) {
+    this.destination = destination;
+    this.length = length;
+ }
+ 
+ Vacation.prototype.print = function () {
+    console.log(this.destination + " | " + this.length)
+ }
+ var maui = new Vacation("Maui", 7);
+ maui.print(); // Maui | 7
+ 
+ class Expedition extends Vacation {
+    constructor(destination, length, gear) {
+        super(destination, length)
+        this.gear = gear
+    }
+    print() {
+        super.print()
+        console.log(`Bring your ${this.gear.join(" and your ")}`)
+    }
+ }
+ 
+const arr = [1, 2, 3, 4];
+const doubled = arr.map(x => x * 2);
+console.log(doubled); // [2, 4, 6, 8]
 
- 
- 
+const product = (a, b) => a * b;
+console.log(product(2, 3)); // 6
+
+const average = numbers => {
+   const sum = numbers.reduce((a, b) => a + b);
+   return sum / numbers.length;
+};
+console.log(average(arr)); // 2.5
+
  
 
 
